@@ -62,6 +62,7 @@ def log_lead_tool(name: str, interest: str) -> str:
     """
     with open("leads.txt", "a", encoding="utf-8") as f:
         f.write(f"{name} - {interest}\n")
+    print(f"[LEAD] {name} - {interest}")
     return "Lead logged"
 
 
@@ -87,6 +88,7 @@ def log_support_ticket_tool(issue: str) -> str:
     """
     with open("support_tickets.txt", "a", encoding="utf-8") as f:
         f.write(issue + "\n")
+    print(f"[TICKET] {issue}")
     return "Support ticket logged"
 
 
